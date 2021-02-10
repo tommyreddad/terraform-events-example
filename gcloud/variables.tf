@@ -12,7 +12,7 @@ variable "cluster_location" {
   default     = "us-central1"
 }
 
-variable "kubeconfig_path" {
-  description = "Path to the kubeconfig file"
-  default = ".kube/config"
+variable "namespace" {
+  description = "Name of the namespace in which to install eventing resources"
+  default     = "test-namespace"
 }
