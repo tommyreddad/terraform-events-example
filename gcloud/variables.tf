@@ -2,7 +2,7 @@ variable "project_id" {
   description = "The project ID"
 }
 
-variable "cluster_name" {
+variable "cluster" {
   description = "Name of the cluster to install eventing on"
   default     = "events-example-cluster"
 }

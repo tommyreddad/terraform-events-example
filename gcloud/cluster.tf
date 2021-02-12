@@ -1,7 +1,7 @@
 resource "google_container_cluster" "example_cluster" {
   provider = google-beta
   project  = var.project_id
-  name     = var.cluster_name
+  name     = var.cluster
   location = var.cluster_location
 
   initial_node_count = 3
@@ -32,7 +32,6 @@ resource "google_container_cluster" "example_cluster" {
 }
 
 provider "kubernetes" {
-  version          = "~> 1.3"
   load_config_file = false
 
   host                   = "https://${google_container_cluster.example_cluster.endpoint}"
