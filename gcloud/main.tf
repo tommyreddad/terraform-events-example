@@ -75,11 +75,6 @@ resource "null_resource" "broker" {
   depends_on = [null_resource.namespace_init]
 }
 
-# Manages a Pub/Sub topic.
-resource "google_pubsub_topic" "topic" {
-  name = var.topic_name
-}
-
 # Manages an event-display service in the namespace `default`.
 resource "null_resource" "event_display" {
   triggers = {
