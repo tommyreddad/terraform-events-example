@@ -3,10 +3,15 @@ A collection of examples for using and setting up eventing with Terraform.
 
 ## Prerequisites
 
-This guide requires Terraform 0.13:
+These examples require [Terraform](https://www.terraform.io/).
 
-```shell
-brew install terraform@0.13
-```
+This covers the following usage scenarios:
 
-## TBD
+* [Using the gcloud CLI](./gcloud/README.md)
+* [Using Knative directly](./knative/README.md)
+
+## Authors
+
+[@tommyreddad](https://github.com/tommyreddad)
+
+This is not an official Google project.

@@ -4,7 +4,7 @@ variable "project_id" {
 
 variable "cluster" {
   description = "Name of the cluster to install eventing on"
-  default     = "events-example-cluster-gcloud"
+  default     = "events-example-cluster-knative"
 }
 
 variable "cluster_location" {
@@ -14,5 +14,5 @@ variable "cluster_location" {
 
 variable "topic_name" {
   description = "Name of the Pub/Sub topic to send events through"
-  default     = "test-topic-gcloud"
+  default     = "test-topic-knative"
 }

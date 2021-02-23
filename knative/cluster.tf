@@ -31,9 +31,8 @@ resource "google_container_cluster" "example_cluster" {
   depends_on = [module.enabled_google_apis]
 }
 
-provider "kubernetes" {
-  load_config_file = false
-
+provider "kubernetes-alpha" {
+  server_side_planning   = true
   host                   = "https://${google_container_cluster.example_cluster.endpoint}"
   token                  = data.google_client_config.default.access_token
   cluster_ca_certificate = base64decode(google_container_cluster.example_cluster.master_auth.0.cluster_ca_certificate)
