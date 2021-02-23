@@ -20,7 +20,7 @@ In order to run this, first initialize Terraform:
 terraform init
 ```
 
-Due to a bug in terraform-provider-kubernetes-alpha, eventing must be initialized in a separate step before the Kubernetes manifests are applied:
+Due to a bug in [terraform-provider-kubernetes-alpha](https://github.com/hashicorp/terraform-provider-kubernetes-alpha), eventing must be initialized in a separate step before the Kubernetes manifests are applied:
 
 ```shell
 terraform apply -target=null_resource.events_init
